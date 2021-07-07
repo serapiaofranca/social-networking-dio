@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Admin, type: :model do
+RSpec.describe Admin, type: :model do  
   
   it "admin is valid" do
     admin = Admin.new(name: "Admin First", email: "admin@test.com", password: "123456")

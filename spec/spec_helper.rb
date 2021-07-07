@@ -94,3 +94,6 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
+
+# https://stackoverflow.com/questions/3966263/attachment-fu-testing-in-rails-3
+#include ActionDispatch::TestProcess

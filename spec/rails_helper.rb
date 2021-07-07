@@ -65,4 +65,5 @@ end
 
 class Rack::Test::UploadedFile
   attr_reader :headers
+
 end
