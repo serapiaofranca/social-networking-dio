@@ -7,7 +7,13 @@ Rails.application.routes.draw do
 
     resources :admins   
       
-  end  
+  end 
+  
+  root  to: "user/timeline#index"
+
+  namespace :user do
+    resources :user
+  end
 
  # post '/admin/admins/new' , to: 'admin/admins#create'
 
