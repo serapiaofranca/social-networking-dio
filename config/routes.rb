@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   namespace :user do
     get 'profile', to: "profile#show"
+    resources :posts, only: :create
   end
 
  # post '/admin/admins/new' , to: 'admin/admins#create'
