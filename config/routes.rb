@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
     resources :admins  
     resources :users, only: :index 
+    resources :posts, only: [:index, :show]
       
   end 
   
