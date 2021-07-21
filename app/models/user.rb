@@ -12,6 +12,6 @@ class User < ApplicationRecord
   has_many :followers_subscriptions, foreign_key: :followed_id, class_name: 'Subscription'
   has_many :followers, through: :followers_subscriptions, source: :followed_by
 
-  has_many :following_subscriptions, foreign_key: :followed_by_id, class: 'Subscription'
+  has_many :following_subscriptions, foreign_key: :followed_by_id, class_name: 'Subscription'
   has_many :following, through: :following_subscriptions, source: :followed
 end

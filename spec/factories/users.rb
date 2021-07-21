@@ -1,7 +1,7 @@
 FactoryBot.define do
     factory :user do
         name {"factory Name"}
-        email {"factory@factory.com"}
+        email {"factory#{rand(1..1000)}@factory.com"}
         phone {"12 12345-6789"}
         avatar {Rack::Test::UploadedFile.new(Rails.root.join('spec/support/test-avatar.png'), 'image/png')}
         password {"123456"}
