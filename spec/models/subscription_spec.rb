@@ -8,6 +8,19 @@ RSpec.describe Subscription, type: :model do
 
     Subscription.create(followed: mary, followed_by: john)
     
+    expect(mary.followers.count).to eql 1
+    expect(mary.followers).to include john
+
+    expect(john.following.count).to eql 1
+    expect(john.following).to include mary
+
+    expect(mary.following.count).to eql 0
+    expect(mary.following).to_not include john
+
+    expect(john.followers.count).to eql 0
+    expect(john.followers).to_not include mary
+
+
   end
 end
  
