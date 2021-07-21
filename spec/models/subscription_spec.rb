@@ -20,6 +20,15 @@ RSpec.describe Subscription, type: :model do
     expect(john.followers.count).to eql 0
     expect(john.followers).to_not include mary
 
+    angel = FactoryBot.create(:user)
+
+    Subscription.create(followed: mary, followed_by: angel)
+
+    expect(mary.followers.count).to eql 2
+    expect(mary.followers).to include angel
+
+    expect(angel.following.count).to eql 1
+    expect(angel.following).to include mary
 
   end
 end
