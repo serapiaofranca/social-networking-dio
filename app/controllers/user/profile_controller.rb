@@ -8,4 +8,8 @@ class User::ProfileController < UserController
         @potential_to_follow = User.potential_to_follow(current_user)
     end
 
+    def following
+        @following = current_user.following
+    end
+
 end
