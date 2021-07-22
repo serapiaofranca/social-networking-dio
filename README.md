@@ -1,24 +1,44 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Application developed at bootcamp fullstack developer, with partnership Digital Innovation One and Impulso.
+Instructor: Luciano Cesar Cordeiro
 
-Things you may want to cover:
+## Social Networking
+Resources:
+* Authentication users 
+* Admins panel
+* Create posts
+* follow / unfollow users
 
-* Ruby version
 
-* System dependencies
+Stack:
 
-* Configuration
+* Ubuntu 20.04.2 LTS
 
-* Database creation
+* Ruby 2.7.2
 
-* Database initialization
+* Rails 6.1.4
 
-* How to run the test suite
+* rbenv 1.1.2-61-g585ed84
 
-* Services (job queues, cache servers, search engines, etc.)
+* Postgresql 13.3 (Ubuntu 13.3-1.pgdg20.04+1)
 
-* Deployment instructions
+* gem 'devise' - authentication
 
-* ...
+* Javascript & Jquery
+
+* Bootstrap
+
+
+## run application: 
+
+* Database initialization, environment variable access 
+    "<%= DB_USERNAME %>"
+    "<%= DB_PASSWORD %>
+
+* Install dependences with bundle on root apllication
+    user:~/app_social_networking$ bundle install
+
+* test for application:
+    user:~/app_social_networking$ rspec spec
+ 

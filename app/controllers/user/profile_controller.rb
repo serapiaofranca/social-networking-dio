@@ -12,4 +12,8 @@ class User::ProfileController < UserController
         @following = current_user.following
     end
 
+    def followers
+        @followers = current_user.followers
+    end
+
 end
