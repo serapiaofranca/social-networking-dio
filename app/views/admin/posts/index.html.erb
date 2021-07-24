@@ -6,7 +6,8 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Usuário</th> 
-      <th scope="col">Mensagem</th>      
+      <th scope="col">Mensagem</th> 
+      <th scope="col">Likes</th>     
       <th scope="col">Postado em</th>      
     </tr>
   </thead>
@@ -17,6 +18,7 @@
         <td> <%= post.user.name %> </td>
         <!-- <td> <%= link_to post.body.split("").first(50).join(""), admin_post_path(post) %> </td> -->
         <td> <%= link_to post.body.truncate(50), admin_post_path(post) %> </td>
+        <td> <%= post.likes.count %> </td>
         <td> <%= post.created_at.strftime("%d/%m/%Y %H:%M") %> </td>              
     <% end %>
   </tbody>
